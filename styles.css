@@ -195,11 +195,11 @@ footer video {
   margin-top: -400vh;
 }
 
-/*Media Query for smaller screens*/
+/* Media Query for screens 768px and below (Tablet and smaller screens) */
 @media (max-width: 768px) {
   .slider {
-    flex-direction: column;
-    height: auto;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center align items */
   }
 
   .slider .controls {
@@ -220,32 +220,9 @@ footer video {
     margin: 5px;
   }
 
-  .slider .wrapper .left > div {
-    padding: 0px 20px;
-  }
-}
-
-@media (max-width: 375px) {
-  .slider {
-    height: auto;
-  }
-
-  .slider .controls {
-    position: static;
-    transform: none;
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-  }
-
-  .slider .controls > div {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 5px;
+  .slider .wrapper {
+    flex-direction: column; /* Stack the content vertically */
+    width: 100%;
   }
 
   .slider .wrapper .left > div {
@@ -254,57 +231,31 @@ footer video {
 
   .slider .wrapper .left > div h2 {
     font-size: 36px; /* Adjust font size for better readability */
-    color: blue;
     margin-bottom: 8px;
   }
 
   .slider .wrapper .left > div p {
-    font-size: 20px; /* Adjust font size for better readability */
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  .slider .wrapper .right > div img {
+    width: 100%; /* Ensure images take full width */
+    height: auto; /* Maintain image aspect ratio */
   }
 }
 
+/* Media Query for screens 320px and below (Phones) */
 @media (max-width: 320px) {
-  .slider {
-    height: auto;
-  }
-
-  .slider .controls {
-    position: static;
-    transform: none;
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-  }
-
-  .slider .controls > div {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 5px;
-  }
-
   .slider .wrapper .left > div {
-    padding: 0px 15px; 
+    padding: 0px 15px; /* Further reduce padding for smaller screens */
   }
 
   .slider .wrapper .left > div h2 {
-    font-size: 28px; 
+    font-size: 28px; /* Adjust font size for better readability */
     margin-bottom: 6px;
   }
 
   .slider .wrapper .left > div p {
-    font-size: 14px; 
+    font-size: 14px; /* Adjust font size for better readability */
   }
 }
-
-
-
-
-
-
-
-
-
